@@ -124,6 +124,9 @@ work_dirs/
 
 # Outputs
 outputs/
+outputs
+experiments/
+experiments
 
 # Examples
 rtmdet_tiny_8xb32-300e_coco.py
