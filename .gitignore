@@ -115,7 +115,6 @@ data
 *.log.json
 docs/modelzoo_statistics.md
 mmdet/.mim
-work_dirs/
 
 # Pytorch
 *.pth
@@ -127,6 +126,8 @@ outputs/
 outputs
 experiments/
 experiments
+work_dirs/
+work_dirs
 
 # Examples
 rtmdet_tiny_8xb32-300e_coco.py
