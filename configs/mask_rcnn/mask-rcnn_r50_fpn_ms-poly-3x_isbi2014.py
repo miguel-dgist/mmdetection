@@ -14,8 +14,8 @@ metainfo = {
 }
 
 train_dataloader = dict(
-    batch_size=4,
-    num_workers=4,
+    batch_size=2,
+    num_workers=2,
     dataset=dict(
         dataset=dict(
             data_root=data_root,
@@ -23,16 +23,16 @@ train_dataloader = dict(
             data_prefix=dict(img='train/'),
             metainfo=metainfo)))
 val_dataloader = dict(
-    batch_size=4,
-    num_workers=4,
+    batch_size=2,
+    num_workers=2,
     dataset=dict(
         data_root=data_root,
         ann_file='annotations/val.json',
         data_prefix=dict(img='val/'),
         metainfo=metainfo))
 test_dataloader = dict(
-    batch_size=4,
-    num_workers=4,
+    batch_size=2,
+    num_workers=2,
     dataset=dict(
         data_root=data_root,
         ann_file='annotations/test.json',
@@ -47,8 +47,8 @@ test_evaluator = dict(
 # Default setting for scaling LR automatically
 #   - `enable` means enable scaling LR automatically
 #       or not by default.
-#   - `base_batch_size` = (8 GPUs) x (4 samples per GPU).
-auto_scale_lr = dict(enable=False, base_batch_size=32)
+#   - `base_batch_size` = (8 GPUs) x (2 samples per GPU).
+auto_scale_lr = dict(enable=False, base_batch_size=16)
 
 
 # model settings
