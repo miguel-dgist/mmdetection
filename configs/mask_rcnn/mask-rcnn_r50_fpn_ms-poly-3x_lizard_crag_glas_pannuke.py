@@ -6,7 +6,7 @@ _base_ = [
 train_dataloader = dict(
     dataset=dict(
         dataset=dict(
-            ann_file='./,coco_annotations/dpath.json,coco_annotations/glas.json,coco_annotations/pannuke.json'
+            ann_file='./,coco_annotations/crag.json,coco_annotations/glas.json,coco_annotations/pannuke.json'
         )
     )
 )
