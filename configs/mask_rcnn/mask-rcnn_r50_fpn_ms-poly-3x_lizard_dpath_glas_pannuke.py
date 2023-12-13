@@ -32,7 +32,7 @@ train_dataloader = dict(
         dataset=dict(
             type='CocoCrossValDataset',
             data_root=data_root,
-            ann_file='./,coco_annotations/crag.json,coco_annotations/dpath.json,coco_annotations/glas.json',
+            ann_file='./,coco_annotations/dpath.json,coco_annotations/glas.json,coco_annotations/pannuke.json',
             data_prefix=dict(img='images/'),
             metainfo=metainfo)))
 val_dataloader = dict(
