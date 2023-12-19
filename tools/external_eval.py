@@ -2,6 +2,7 @@
 import argparse
 import json
 import os
+from tqdm import tqdm
 
 import pandas
 import numpy as np
@@ -36,7 +37,7 @@ def main():
     coco_metric = CocoMetric(
         ann_file=args.gt_fpath,
         metric=['bbox', 'segm'],
-        classwise=False,
+        classwise=True,
         outfile_prefix=args.dst_dir)
     
     coco_metric.dataset_meta = dict(classes=categories)
@@ -45,8 +46,8 @@ def main():
     flist = [fname[:-4] for fname in flist if fname[-4:]==".npy"]
     flist.sort()
 
-    for fname in flist:
-        print(fname, end="\r")
+    for fname in (pbar := tqdm(flist)):
+        pbar.set_description(fname)
         fpath = os.path.join(args.pred_dir,fname)
         array = np.load(fpath+".npy")
         with open(fpath+".json", "r") as f:
