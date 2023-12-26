@@ -86,8 +86,8 @@ metainfo = {
 }
 
 train_dataloader = dict(
-    batch_size=6,
-    num_workers=6,
+    batch_size=5,
+    num_workers=5,
     batch_sampler=None,
     pin_memory=True,
     dataset=dict(
@@ -109,8 +109,8 @@ val_dataloader = dict(
         metainfo=metainfo,
         pipeline=test_pipeline))
 test_dataloader = dict(
-    batch_size=3,
-    num_workers=3,
+    batch_size=16,
+    num_workers=8,
     dataset=dict(
         type='CocoDataset',
         data_root=data_root,
